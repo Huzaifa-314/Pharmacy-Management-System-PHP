@@ -1,0 +1,93 @@
+<html>
+
+<head>
+  <title>Pharmacy Management System Admin Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <style>
+    body {
+      font-family: Verdana, Arial, sans-serif;
+      font-size: 0.9rem;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    #left-panel {
+      width: 20%;
+      float: left;
+      background-color: #F0F0F0;
+      padding: 10px;
+    }
+
+    #main {
+      width: 80%;
+      float: left;
+    }
+
+    #left-panel ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    #left-panel li {
+      padding: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 2px;
+      cursor: pointer;
+    }
+
+    #left-panel li.active {
+      background-color: #B3B3B3;
+    }
+  </style>
+</head>
+
+<body>
+    <div id="left-panel">
+      <ul>
+        <li id="add-product-tab" class="tab-link active" data-tab="add-product">Add Product</li>
+        <li id="sale-product-tab" class="tab-link" data-tab="sale-product">Sale Product</li>
+        <li id="stock-tab" class="tab-link" data-tab="stock">Stock</li>
+        <li id="reports-tab" class="tab-link" data-tab="reports">Reports</li>
+        <li id="user-management-tab" class="tab-link" data-tab="user-management">User Management</li>
+      </ul>
+    </div>
+    <div id="main">
+      <div id="add-product" class="tab-content">
+        Add Product Content
+      </div>
+      <div id="sale-product" class="tab-content">
+        Sale Product Content
+      </div>
+      <div id="stock" class="tab-content">
+        Stock Content
+      </div>
+      <div id="reports" class="tab-content">
+        Reports Content
+      </div>
+      <div id="user-management" class="tab-content">
+        User Management Content
+      </div>
+    </div>
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.tab-link').click(function () {
+        $('.tab-link').removeClass('active');
+        $(this).addClass('active');
+        $('.tab-content').hide();
+        $('#' + $(this).data('tab')).show();
+      });
+      $('.active').click();
+    });
+  </script>
+</body>
+
+</html>

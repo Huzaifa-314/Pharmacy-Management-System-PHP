@@ -1,0 +1,276 @@
+:root {
+  --bg-gradient: linear-gradient(to right, #4F968F, #3A8A87);
+  --bg-gradient-body: linear-gradient(to right, #CBDCE1, #CDDDE2);
+  --lpanel-width: 200px;
+  --dark-heading: #214749;
+  --bg-card:#DBE4EC;
+  --report-danger:#C9505A;
+  --report-success: linear-gradient(to right, #48BEB2, #3CB7A1)
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-image: var(--bg-gradient-body);
+}
+
+.copy-left-panel {
+  min-width: var(--lpanel-width);
+  height: 100%
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+#left-panel {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: var(--lpanel-width);
+  height: 100%;
+  float: left;
+  background-image: var(--bg-gradient);
+  height: 100%;
+}
+
+.panel-area {
+  flex-basis: 100%;
+}
+
+#left-panel h4{
+  margin-bottom: 0px;
+}
+
+#left-panel ul {
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+}
+
+#left-panel ul li {
+  padding-right: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  transition: 0.2s;
+  
+}
+#left-panel ul li i{
+  font-size: 25px;
+  color: white;
+  padding-right: 10px;
+}
+#left-panel li span{
+  flex-basis: 100%;
+  color: white;
+  font-weight: 600;
+  padding: 10px 15px;
+  border-radius: 20px;
+}
+#left-panel li:not(.active):hover{
+  transform: translateX(15px);
+
+}
+
+#left-panel li.active span{
+  color: black;
+  background-image: var(--bg-gradient-body);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.title{
+  margin: 28px 0 40px 0px;
+
+}
+.title h4{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.panel-area .container-fluid{
+  margin: 10px 20px;
+}
+
+.panel-area .navbar-brand{
+  color: var(--dark-heading);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.panel-area nav div form{
+  width: 200px;
+  margin-left: auto;
+  align-items: center;
+}
+
+.panel-area nav div form input{
+  background-color: var(--bg-gradient);
+
+border: none;;
+}
+.panel-area .search{
+  background-color: white;
+  border-radius: 30px;
+}
+
+.panel-area nav div form i{
+  background-color: var(--dark-heading);
+  width: 50px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.panel-area nav .right{
+  display: flex;
+}
+
+.panel-area nav .right i{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  font-size: 20px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+}
+
+.panel-area nav .right img{
+  width: 40px;
+  border-radius: 50%;
+
+}
+
+.panel-area .right div i{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  bottom: -5px;
+  left: 15px;
+  font-size: 15px;
+}
+
+.main-area{
+  padding: 0 20px;
+  margin: 30px;
+}
+
+.box{
+  background-color: var(--bg-card);
+  border-radius: 10px;  
+  overflow: hidden;
+  margin: 20px 0 20px 0;
+}
+
+.box-title{
+  margin: 15px;
+  font-size: 30px;
+}
+.add-product .left{
+  float: left;
+}
+
+.box-content{
+  margin: 10px;
+  position: relative;
+  
+}
+
+.input-field button{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  vertical-align: baseline;
+  margin-left: 20px;
+  padding: 10px 30px;
+  border: none;
+  background-color: var(--dark-heading);
+  color: white;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.dark-button{
+
+  text-decoration: none;
+  margin-left: 20px;
+  padding: 10px 30px;
+  border: none;
+  background-color: var(--dark-heading);
+  color: white;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.input-field button:focus{
+  background-image: var(--bg-gradient);
+}
+
+.input-item{
+  display: inline-block;
+  margin:3px;
+}
+.input-item input{
+  width: 150px;
+  border: none;
+
+  border-radius: 3px;
+  height: 30px;
+  outline: none;
+  padding-left: 5px;
+}
+.input-item input:focus{
+  border-bottom: 2px solid var(--dark-heading);
+}
+
+.input-item div{
+  font-weight: 600;
+}
+
+.input-item textarea{
+  width:auto;
+}
+
+.product-table{
+}
+
+.display-records{
+  background-color: #214749;
+}
+.tbl-scroll{
+  overflow-x: scroll;
+  overflow-y: scroll;
+  height: 500px;
+}
+
+.report-status{
+  color: white;
+  height: 100%;
+}
+
+.report-status-body{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: scroll;
+}
+
+@media only screen and (max-width: 576px) {}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tabs</title>
+  <style>
+    /* Add styling for the tabs */
+    .tabs {
+      display: flex;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .tabs button {
+      background-color: white;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+    .tabs button:hover {
+      background-color: #f5f5f5;
+    }
+    .tabs button.active {
+      background-color: #f5f5f5;
+      font-weight: bold;
+      color: black;
+    }
+    .tab-content {
+      display: none;
+      padding: 20px;
+      border-top: 1px solid #ccc;
+    }
+    .tab-content.active {
+      display: block;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div class="tabs">
+    <button class="tab-link active" data-tab="tab-1">Tab 1</button>
+    <button class="tab-link" data-tab="tab-2">Tab 2</button>
+    <button class="tab-link" data-tab="tab-3">Tab 3</button>
+  </div>
+  <div class="tab-content active" id="tab-1">
+    <h2>Tab 1</h2>
+    <p>Content for tab 1 goes here.</p>
+  </div>
+  <div class="tab-content" id="tab-2">
+    <h2>Tab 2</h2>
+    <p>Content for tab 2 goes here.</p>
+  </div>
+  <div class="tab-content" id="tab-3">
+    <h2>Tab 3</h2>
+    <p>Content for tab 3 goes here.</p>
+  </div>
+  <script>
+    // Add tab functionality
+    $('.tab-link').click(function() {
+      // Remove active class from all tabs
+      $('.tab-link').removeClass('active');
+      // Hide all tab content
+      $('.tab-content').hide();
+      // Show the selected tab content
+      $('#' + $(this).data('tab')).show();
+      // Add the active class to the clicked tab
+      $(this).addClass('active');
+    });
+  </script>
+</body>
+</html>

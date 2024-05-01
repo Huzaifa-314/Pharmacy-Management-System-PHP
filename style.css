@@ -1,0 +1,618 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Open Sans", sans-serif ;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+ul li{
+    list-style: none;
+}
+
+:root {
+    --background: #f8f9fa;
+    --background-green: #afebbf;
+    --background-sky: #bee0e7;
+    --p-color: #08582a;
+}
+.container{
+    width: 95% !important;
+    margin: auto;
+}
+
+
+h4{
+    color: #666 !important;
+}
+/* header section */
+
+/* top header start */
+/* **************** */
+.top-header{
+    color:var(--p-color);
+}
+.top-header-items{
+    display: flex;
+    align-items: center;
+}
+.pharmacy-info{
+    display: flex;    
+}
+.pharmacy-info div{
+    margin-right: 15px;
+}
+
+.top-header div.social{
+    margin-left: auto;
+}
+.top-header div.social i{
+    margin-left: 5px;
+}
+/* top header end */
+/* **************** */
+
+
+
+
+
+/* middle header start */
+/* **************** */
+.middle-header{
+    padding: 5px 0;
+    width: 100%;
+    background: var(--background-sky);
+}
+.logo img{
+    width: 130px;   
+    margin-right: 10px;
+}
+.search{
+    width: 40%;
+}
+.right a{
+    margin-left: 15px;
+}
+.right ul{
+    margin-bottom: 0px;
+}
+.header-search-input{
+    width:80%;
+    height: 45px;
+    border: none;
+    outline: 0!important;
+    padding-left: 15px;
+    color: var(--p-color);
+    font-size: 12px;
+    border-radius: 30px 0 0 30px;
+    background: #fff;
+}
+.header-search-button{
+    width:10%;
+    border-radius: 0 30px 30px 0;
+    height: 45px;
+    outline: 0 !important;
+    border: none;
+    background-color: var(--p-color);
+    color: white;
+
+    margin-left: -3px;
+}
+.middle-header .right i{
+    color: var(--p-color);
+}
+.upload-prescription{
+    border: none;
+    background-color: var(--p-color);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+/* cart */
+.sidecart{
+    
+    width: 320px;
+    min-width: 320px;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    overflow:auto !important;
+    right: -320px;
+    z-index: 9000;
+    transition: 0.2s ease;
+  }
+  
+  @media(max-width: 400px){
+    .sidecart{
+      width: 100vw;
+      right: -100vw;
+    }
+  }
+  
+  .open-cart{
+    right: 0px !important;
+  }
+  .open-cart:before{
+    content: '';
+    position: fixed;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    pointer-events: none;
+    background-color: black;
+    opacity: 0.5;
+    z-index: -1;
+  }
+  
+  .product-quantity{
+    position: relative;
+  }
+  
+  .product-quantity:after{
+    content: 'xde';
+    white-space: nowrap;
+    position: absolute;
+    z-index: 10;
+    margin-left: 2px;
+  }
+  
+  .sidecart-price > div{
+    margin: auto;
+    width: 100%;
+    white-space: nowrap;
+  }
+  
+.cart button{
+    border:none;
+    background-color: var(--background-green);
+}
+
+.cart{
+    position: relative;
+}
+.cart-counter{
+    top: 0;
+    margin-top: -16px;
+    margin-left: 15px;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: red;
+    border-radius: 50%  ;
+}
+
+/* Extra search */
+.search-extra{
+    width: 80%;
+    display: none;
+}
+.header-search-extra-input{
+    width: 80%;
+    height: 45px;
+    padding-left: 15px;
+    color: var(--p-color);
+    font-size: 12px;
+    border: 2px solid var(--p-color);
+    border-radius: 20px 0 0 20px;
+    background: #fff;
+}
+.header-search-extra-button{
+    width:20%;
+    border-radius: 0 20px 20px 0;
+    height: 45px;
+    outline: 0 !important;
+    border: none;
+    background-color: var(--p-color);
+    color: white;
+
+    margin-left: -3px;
+}
+/* middle header end */
+/* **************** */
+
+
+
+
+
+
+
+/* cart page design */
+/* **************** */
+
+.catagory-title{
+    color: var(--p-color);
+    padding: 30px 0px 10px 0px !important;
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 20px;
+}
+.catagory-title::after{
+    content: '';
+    display: block;
+    margin-top: 0.2rem;
+    width: 5rem;
+    height: 5px;
+    background-color: var(--p-color);
+    border-radius: 20px;
+}
+.catagory-title-b{
+    color: var(--background-sky);
+    padding: 30px 0px 10px 0px !important;
+    font-size: 3rem !important;
+    font-weight: 700 !important;
+}
+.single-product{
+    /* padding: 10px; */
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    background-color: white;
+    overflow: hidden;
+}
+.single-product img{
+    height: 175px;
+    margin: auto;
+}
+.product-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-sky);
+}
+.cat-name{
+    margin-top: 8px;
+}
+.com-name{
+    font-weight: bold;
+    color: black;
+    font-size: 1.4rem;
+    margin-bottom: 0px;
+    line-height: 1.8rem;
+}
+.product-heading{
+    display: flex;
+    margin-top: 0.5rem;
+}
+.product-card-body{
+    margin: 0 18px 12px 18px;
+}
+.generic-name{  
+    font-style: italic;
+    color: rgb(102, 101, 101);
+    font-size: 0.9rem;
+}
+.product-name{
+    flex-basis: 85%;
+}
+.product-price{
+    /* font-weight: bold; */
+    color: var(--p-color);
+    font-size: 2.3em;
+    flex-basis: 15%;
+    margin-top: -0.5rem;
+}
+.add-to-cart{
+    /* display: flex;
+    justify-content: center; */
+}
+.add-to-cart button{
+    border-radius: 1.5rem;
+    background-color: white;
+    width: max-content;
+    padding: 5px 15px;
+    cursor: pointer;
+    background-color: var(--p-color);
+    color: white;
+    border: 2px solid var(--p-color);
+    transition: 0.3s;
+    font-size: 1rem;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+button{
+    border-radius: 1.5rem !important;
+    background-color: white;
+    width: max-content;
+    padding: 5px 15px;
+    cursor: pointer;
+    background-color: var(--p-color);
+    color: white;
+    border: 2px solid var(--p-color);
+    transition: 0.3s;
+    font-size: 1rem;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+.add-to-cart button:hover{
+    background-color: var(--p-color);
+    color: white;
+    
+}
+
+
+
+/* location page design */
+/* ******************** */
+.location table{
+    border: 1px solid gray;
+}
+
+
+/* user page design */
+/* **************** */
+.User-pic{
+    border-radius: 50%;
+}
+.user-item ul li{
+    margin: 10px 0;
+}
+.user-item ul li a{
+    text-decoration: none;
+    color: black;
+}
+.user-sidebar{
+    background-color: var(--background-green);
+}
+.orderHistory{
+    border: 1px solid var(--p-color);
+    padding: 15px;
+    text-align: center;
+}
+
+.perscriptionHistory .description{
+    border:1px solid var(--p-color);
+    padding: 15px;
+    background-color: var(--background);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;    
+
+}
+.user-area{
+    height: 32rem;
+}
+/* tab sytle */
+  /* Style the tab */
+
+
+  /* Style the buttons inside the tab */
+  .tab i{
+    font-size: 1.5em;   
+    font-weight: 700;
+  }
+  .tablinks{
+    border: none;
+    background-color: var(--background-green);
+    padding: 5px;
+    width: 100%;
+    text-align: left;
+  }
+
+  /* Change background color of buttons on hover */
+  .tablinks:hover {
+    background-color: var(--p-color);
+    color: white;
+    border: none;
+    transform: scaleX(.70em);
+    transition: .5s;
+  }
+
+  /* Create an active/current tablink class */
+  .tablinks.active {
+    background-color: var(--p-color);
+    color: white;
+    border: none;
+  }
+
+  /* Style the tab content */
+.tabcontent{
+    display: none;
+  }
+
+
+
+
+
+
+
+/* product page */
+/* ************* */
+.cat-single-product img{
+    width:100%;
+}
+.inc-dec{
+    height: 40px;
+}
+.inc-dec p{
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 25px;
+}
+input.inc-dec-button{
+    border: none;
+    background-color: var(--p-color);
+    color: white;
+    padding: 0px 20px;
+    text-align: center;
+    cursor: pointer;
+  }
+.cat-single-product-price{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 15px;
+}
+.cat-single-product-price .add-to-cart{
+    margin: 15px 0;
+}
+.detailed-description{
+    font-size: 12px;
+    color: gray;
+}
+
+
+
+
+
+/* Sign In-up design start */
+/* ******************* */
+
+.Sign-in-up{
+    width: 100%;
+    background-color: #F5F5F5;
+    padding: 7rem;
+}
+
+.container-tab{
+ margin: auto;
+}
+
+
+ 
+
+.sign-in-b{
+    flex-basis: 50%;
+    background-color: white;
+   padding: 1em .5em;
+   text-align: center;
+   font-size: 1.8em;
+   font-weight: 900;
+   color: #064420;
+    
+   
+    
+
+}
+
+
+.sign-up-b{
+    flex-basis: 50%;
+    background-color: #DEEDF0; 
+    padding: 1em .5em; 
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: 900;
+    color: #064420;
+    
+  
+}
+
+.logintab{
+    padding: 1em;
+    background-color: white;
+
+}
+
+.logintab h2{
+    text-align: center;
+    color: #666;
+    font-size: 2.5em;
+    font-weight: 700;
+    
+}
+.logintab .btn{
+    background-color: #064420;
+    color: white;
+}
+
+.logintab .forgot-area a{
+    text-decoration: none;
+    color: #064420;
+
+}
+
+.form-group label{
+    color: #666;
+    font-weight: 700;
+}
+.login-form{
+    padding: 2em 1em;
+}
+
+.signuptab{
+    padding: 1em;
+    background-color: white;
+
+}
+
+.signuptab h2{
+    text-align: center;
+    color: #666;
+    font-size: 2.5em;
+    font-weight: 700;
+    
+}
+.signuptab .btn{
+    background-color: #064420;
+    color: white;
+}
+
+.signuptab .forgot-area a{
+    text-decoration: none;
+    color: #064420;
+
+}
+
+.form-group label{
+    color: #666;
+    font-weight: 700;
+}
+.signup-form{
+    padding: 2em 1em;
+}
+
+
+/* Signin&up design end
+********************** */
+
+
+
+
+
+
+/* footer design */
+.footer{
+    padding: 3.2rem 1.25rem;
+    background-color: var(--background-sky);
+}
+.footer-logo{
+    width: 150px;
+}
+.footer-item{
+    margin-bottom: 30px;
+}
+.copy-r-text{
+    text-align: center;
+    color: #666;
+}
+
+
+/* *************
+* Front Page Background css*
+************************ */
+
+/* .c-1{
+    background-image: url(img/1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    padding: 3em 0em;
+    margin: 3em 0em;
+}
+
+.c-3{
+     background-image: url(img/3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    padding: 3em 0em;
+    margin: 3em 0em;
+} */
